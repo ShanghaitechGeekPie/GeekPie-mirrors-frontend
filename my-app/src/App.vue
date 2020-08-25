@@ -21,9 +21,9 @@
             <v-toolbar-title style="font-size: 125%"
             >GeekPie Open Source Mirror
             </v-toolbar-title>
-
-
         </v-app-bar>
+
+
         <v-sheet
                 id="scrolling-techniques"
                 class="main-container"
@@ -35,13 +35,8 @@
                         <v-col
                                 class="d-flex"
                                 cols="9">
-                            <HelloWorld/>
+                            <test/>
 
-                        </v-col>
-                        <v-col
-                                class="d-flex"
-                                cols="3">
-                            <HelloWorld/>
                         </v-col>
                     </v-row>
 
@@ -49,18 +44,26 @@
                 </v-main>
             </v-container>
         </v-sheet>
-
+    <v-footer
+        color=indigo
+    >
+        <span class="white--text">Geek Pie Association &copy; {{ new Date().getFullYear() }}</span>
+    </v-footer>
     </v-app>
+    
+
+
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld';
-
+    // import HelloWorld from './components/HelloWorld';
+    // import news from './components/news';
+    import test from './components/test';
     export default {
         name: 'App',
 
         components: {
-            HelloWorld,
+            test
         },
 
         data: () => ({
