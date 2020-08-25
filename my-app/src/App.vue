@@ -1,45 +1,41 @@
 <template>
-  <v-app>
+  <v-app class="overflow-hidden">
     <v-app-bar
-      app
-      color="primary"
-      dark
+            app
+            fixed
+            color="#fcb69f"
+            dark
+            shrink-on-scroll
+            src="https://picsum.photos/1920/1080?random"
+            height="200"
     >
-      <div class="d-flex align-center">
+      <div class="d-flex align-center" >
         <v-img
-          alt="Vuetify Logo"
+          alt="Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="logo.png"
           transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+          height="50"/>
       </div>
+      <v-toolbar-title style="font-size: 125%"
+      >GeekPie Open Source Mirror</v-toolbar-title>
 
-      <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
     </v-app-bar>
+    <v-sheet
+            id="scrolling-techniques"
+            class="main-container"
+            style="max-height: calc(100vh - 64px);"
+    >
+      <v-container>
+        <v-main>
+          <HelloWorld/>
+          <HelloWorld/>
+        </v-main>
+      </v-container>
+    </v-sheet>
 
-    <v-main>
-      <HelloWorld/>
-    </v-main>
   </v-app>
 </template>
 
@@ -54,7 +50,12 @@ export default {
   },
 
   data: () => ({
-    //
+    windowHeight: document.documentElement.clientHeight-1000
   }),
+  computed: {
+    scrollerHeight : function() {
+      return (window.innerHeight)*0.9;
+    }
+  }
 };
 </script>
