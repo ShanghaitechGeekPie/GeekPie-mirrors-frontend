@@ -1,0 +1,64 @@
+<v-app >
+        <v-app-bar
+                app
+                fixed
+                color="#fcb69f"
+                dark
+                shrink-on-scroll
+                src="https://picsum.photos/1920/1080?random"
+                height="200"
+        >
+            <div class="d-flex align-center">
+                <v-img
+                        alt="Logo"
+                        class="shrink mr-2"
+                        contain
+                        src="logo.png"
+                        transition="scale-transition"
+                        height="50"/>
+            </div>
+            <v-toolbar-title style="font-size: 125%"
+            >GeekPie Open Source Mirror
+            </v-toolbar-title>
+        </v-app-bar>
+
+
+
+
+        <v-main>
+            <!-- <v-container fluid>
+
+            <v-row>
+                <v-col
+                        class="d-flex"
+                        cols="9">
+                    <test/>
+
+                </v-col>
+            </v-row>
+
+            </v-container> -->
+        </v-main>
+
+
+        <v-footer app
+            color=indigo
+        >
+            <span class="white--text">Geek Pie Association &copy; {{ new Date().getFullYear() }}</span>
+        </v-footer>
+
+    </v-app>
+
+
+            components: {
+            //test
+        },
+
+        data: () => ({
+            windowHeight: document.documentElement.clientHeight - 1000
+        }),
+        computed: {
+            scrollerHeight: function () {
+                return (window.innerHeight) * 0.9;
+            }
+        }
