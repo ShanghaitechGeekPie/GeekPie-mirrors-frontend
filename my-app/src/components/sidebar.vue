@@ -48,12 +48,40 @@
           <br />
         </v-card>
       </div>
+
+      <div class="col col-12">
+        <v-card class="mx-auto" max-width="344">
+          <v-card-text>
+            <p class="display-1 text--primary">其他链接</p>
+          </v-card-text>
+          <a
+            v-for="(link, i) in otherlinks"
+            :key="i"
+            :href="link.href"
+            class="subheading mx-3"
+            target="_blank"
+          >{{ link.text }}<br></a>
+
+        </v-card>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "test",
+  name: "sidebar",
+  data: () => ({
+    otherlinks: [
+      {
+        text: "镜像源日志 / Blog",
+        href: "https://www.geekpie.club/",
+      },
+      {
+        text: "项目开源 / GitHub",
+        href: "https://github.com/ShanghaitechGeekPie",
+      },
+    ],
+  }),
 };
 </script>
