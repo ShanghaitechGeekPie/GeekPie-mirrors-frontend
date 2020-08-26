@@ -30,13 +30,17 @@
       <v-container>
         <v-main>
           <v-row>
-            <!-- <v-col class="d-flex" cols="9">
-              <test />
-            </v-col>-->
+            <v-col
+                    class="d-flex"
+                    cols="9">
+              <HelloWorld/>
 
-            <div class="d-flex col col-9">
-                <sidebar />
-            </div>
+            </v-col>
+            <v-col
+                    class="d-flex"
+                    cols="3">
+              <sidebar />
+            </v-col>
           </v-row>
         </v-main>
       </v-container>
