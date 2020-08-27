@@ -22,38 +22,35 @@
       <v-toolbar-title style="font-size: 125%">GeekPie Open Source Mirror</v-toolbar-title>
     </v-app-bar>
 
+    <!---
     <v-sheet
       id="scrolling-techniques"
       class="main-container"
       style="max-height: calc(100vh - 64px);"
     >
-      <v-container>
-        <v-main>
-          <v-row>
-            <v-col
-                    class="d-flex"
-                    cols="9">
-              <HelloWorld/>
+    --->
 
-            </v-col>
-            <v-col
-                    class="d-flex"
-                    cols="3">
-              <sidebar />
-            </v-col>
-          </v-row>
-        </v-main>
+    <v-main>
+      <v-container>
+        <v-row>
+          <v-col class="d-flex" cols="9"></v-col>
+          <v-col class="d-flex" cols="3">
+            <sidebar />
+          </v-col>
+        </v-row>
       </v-container>
+    </v-main>
+
+    <!---
     </v-sheet>
-    <!-- <v-footer color="indigo">
+    --->
+    <v-footer color="indigo">
       <span class="white--text">Geek Pie Association &copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>-->
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld';
-// import news from './components/news';
 import sidebar from "./components/sidebar";
 export default {
   name: "App",
