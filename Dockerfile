@@ -6,6 +6,7 @@ WORKDIR /Frontend
 
 COPY /my-app  /Frontend
 
+RUN yarn config set registry https://registry.npm.taobao.org/
 RUN yarn
 RUN yarn build
 
