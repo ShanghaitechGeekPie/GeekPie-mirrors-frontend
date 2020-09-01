@@ -14,7 +14,13 @@
       <td><a :href=local_url+item.name>{{ item.name }}</a></td>
       <td>{{ item.time }}</td>
       <td>
-        <div v-if="item.statuscode !== 0">
+        <div v-if="item.statuscode < 0">
+          <v-progress-circular
+              indeterminate
+              color="yellow"
+          >U</v-progress-circular>
+        </div>
+        <div v-else-if="item.statuscode !== 0">
           <v-progress-circular
               indeterminate
               color="primary"
