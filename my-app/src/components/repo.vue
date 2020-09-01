@@ -13,7 +13,20 @@
     <tr v-for="item in repotable" :key="item.name">
       <td><a :href=local_url+item.name>{{ item.name }}</a></td>
       <td>{{ item.time }}</td>
-      <td>{{ item.statuscode }}</td>
+      <td>
+        <div v-if="item.statuscode !== 0">
+          <v-progress-circular
+              indeterminate
+              color="primary"
+          ></v-progress-circular>
+        </div>
+        <div v-else>
+          <v-progress-circular
+              :value="100"
+              color="green"
+          ></v-progress-circular>
+        </div>
+      </td>
       <td>
         <v-btn :href=help_url+item.name+html_url>help</v-btn>
       </td>
