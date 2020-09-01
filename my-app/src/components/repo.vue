@@ -18,17 +18,17 @@
           <v-progress-circular
               indeterminate
               color="primary"
-          ></v-progress-circular>
+          >L</v-progress-circular>
         </div>
         <div v-else>
           <v-progress-circular
               :value="100"
               color="green"
-          ></v-progress-circular>
+          >G</v-progress-circular>
         </div>
       </td>
       <td>
-        <v-btn :href=help_url+item.name+html_url>help</v-btn>
+        <v-btn :href=help_url+item.name+html_url color="primary">help</v-btn>
       </td>
     </tr>
     </tbody>
