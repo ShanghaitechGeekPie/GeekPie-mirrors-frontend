@@ -11,7 +11,7 @@
     </thead>
     <tbody>
     <tr v-for="item in repotable" :key="item.name">
-      <td><a :href=local_url+item.name>{{ item.name }}</a></td>
+      <td><v-btn :href=local_url+item.name>{{ item.name }}</v-btn></td>
       <td>{{ getUpdateTime(Math.floor(item.time*1000)) }}</td>
       <td>
         <div v-if="item.statuscode < 0">
