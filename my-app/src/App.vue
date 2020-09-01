@@ -33,8 +33,10 @@
     <v-main>
       <v-container>
         <v-row>
-          <v-col class="d-flex" cols="9"></v-col>
-          <v-col class="d-flex" cols="3">
+          <v-col cols="9">
+            <repo />
+          </v-col>
+          <v-col cols="3">
             <sidebar />
           </v-col>
         </v-row>
@@ -52,11 +54,13 @@
 
 <script>
 import sidebar from "./components/sidebar";
+import repo from "./components/repo";
 export default {
   name: "App",
 
   components: {
     sidebar,
+    repo,
   },
 
   data: () => ({

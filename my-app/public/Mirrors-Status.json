@@ -1,4 +1,4 @@
-{"test":[
+[
   {
     "name": "CPAN",
     "statuscode": -1,
@@ -447,4 +447,4 @@
       "upstream": null
     }
   }
-]}
+]
