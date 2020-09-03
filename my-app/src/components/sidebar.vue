@@ -156,7 +156,7 @@ export default {
     }).then(res => {
       this.alltime = 0;
       res.data.forEach((item)=>{this.alltime  += (new Date().getTime() - Math.floor(item.time * 1000));})
-      this.alltime/=32;
+      this.alltime/=res.data.length;
       var percent = Math.log(2)/Math.log(this.alltime/3600000)*100;
       if (this.alltime<4000000) percent = 100;
       percent = Math.max(0,percent);
