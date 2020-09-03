@@ -62,7 +62,9 @@ export default {
     sidebar,
     repo,
   },
-
+  created(){
+    document.title="Geek Pie Open Source Mirror"
+  },
   data: () => ({
     windowHeight: document.documentElement.clientHeight - 1000,
   }),
