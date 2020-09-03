@@ -13,6 +13,6 @@ CMD nginx -g "daemon off;"
 
 FROM nginx:stable-alpine
 
-COPY --from=build /Frontend /dist
+COPY --from=build /Frontend/dist/dist /tmp
 
 COPY nginx.conf /etc/nginx/
