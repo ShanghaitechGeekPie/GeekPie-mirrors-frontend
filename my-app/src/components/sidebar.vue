@@ -105,7 +105,14 @@
       </div>
       <div  class="col col-12">
         <v-card class="mx-auto" max-width="344">
-          <v-card-text><span :style="{'color':rgb}">同步状态（平均时间差）： {{getUpdateTime(alltime)}}</span></v-card-text>
+          <v-card-text><span>同步状态（平均时间差）： {{getUpdateTime(alltime)}}</span></v-card-text>
+          <v-progress-linear
+              :color="rgb"
+              height="10"
+              :value="alltime"
+              stream
+              indeterminate
+          ></v-progress-linear>
         </v-card>
       </div>
     </div>
@@ -150,12 +157,13 @@ export default {
       this.alltime = 0;
       res.data.forEach((item)=>{this.alltime  += (new Date().getTime() - Math.floor(item.time * 1000));})
       this.alltime/=32;
-      var percent = Math.log(21600)/Math.log(this.alltime);
-      percent = Math.max(100,percent);
-      percent = Math.min(0,percent);
+      var percent = Math.log(2)/Math.log(this.alltime/3600000)*100;
+      if (this.alltime<4000000) percent = 100;
+      percent = Math.max(0,percent);
+      percent = Math.min(100,percent);
       var r = percent<50 ? 255 : Math.floor(255-(percent*2-100)*255/100);
       var g = percent>50 ? 255 : Math.floor((percent*2)*255/100);
-      this.rgb = 'rgb('+r+','+g+',0)';
+      this.rgb = 'rgb('+r+','+g+',90)';
       this.$forceUpdate();
     })
   },
