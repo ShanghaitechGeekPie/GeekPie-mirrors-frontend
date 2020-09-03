@@ -74,7 +74,7 @@
                   color="yellow"
               >U
               </v-progress-circular>
-              ： 正在同步
+              ： 正在同步 Updating
             </v-card-text>
           </div>
           <div>
@@ -85,7 +85,7 @@
                   color="primary"
               >L
               </v-progress-circular>
-              ： 正在重试
+              ： 正在重试 Loading
             </v-card-text>
           </div>
           <div>
@@ -96,7 +96,7 @@
                   color="green"
               >G
               </v-progress-circular>
-              ： 一切正常
+              ： 一切正常 Green
             </v-card-text>
           </div>
 
