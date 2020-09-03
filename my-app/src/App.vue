@@ -19,7 +19,7 @@
           height="50"
         />
       </div>
-      <v-toolbar-title style="font-size: 125%">GeekPie Open Source Mirror</v-toolbar-title>
+      <v-toolbar-title style="font-size: 125%">GeekPie Open Source Mirrors</v-toolbar-title>
     </v-app-bar>
 
     <!---

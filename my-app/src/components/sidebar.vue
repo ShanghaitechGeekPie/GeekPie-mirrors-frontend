@@ -113,12 +113,28 @@ export default {
   data: () => ({
     otherlinks: [
       {
-        text: "镜像源日志 / Blog",
-        href: "https://www.geekpie.club/",
+        text: "镜像源日志 / News",
+        href: "https://t.me/GeekPie_mirrors",
+      },
+      {
+        text: "新增镜像 / New Mirror",
+        href: "https://github.com/ShanghaitechGeekPie/DailyWork/issues/4",
       },
       {
         text: "项目开源 / GitHub",
         href: "https://github.com/ShanghaitechGeekPie",
+      },
+      {
+        text: "状态监控 / Status ",
+        href: "https://status.geekpie.club/",
+      },
+      {
+        text: "联系我们 / E-mail",
+        href: "mailto://pie@geekpie.club",
+      },
+      {
+        text: "ShanghaiTech University",
+        href: "https://www.shanghaitech.edu.cn/",
       },
     ],
   }),
