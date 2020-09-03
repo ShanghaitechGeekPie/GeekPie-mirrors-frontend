@@ -71,10 +71,10 @@
             <v-card-text>
               <v-progress-circular
                   indeterminate
-                  color="yellow"
-              >U
+                  color="primary"
+              >L
               </v-progress-circular>
-              ： 正在同步 Updating
+              ： 正在重试 Loading
             </v-card-text>
           </div>
           <div>
@@ -82,12 +82,13 @@
             <v-card-text>
               <v-progress-circular
                   indeterminate
-                  color="primary"
-              >L
+                  color="yellow"
+              >U
               </v-progress-circular>
-              ： 正在重试 Loading
+              ： 正在同步 Updating
             </v-card-text>
           </div>
+
           <div>
 
             <v-card-text>
