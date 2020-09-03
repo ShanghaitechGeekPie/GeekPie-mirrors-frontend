@@ -111,15 +111,8 @@
 const axios = require('axios');
 export default {
   name: "sidebar",
-  data: () => ({
-    axios.request({
-      url: "Mirrors-Status.json",
-      method: 'get',
-    }).then(res => {
-      this.repotable = res.data;
-      this.$forceUpdate();
-    }),
-    otherlinks: [
+  data (){
+    this.otherlinks= [
       {
         text: "镜像源日志 / News",
         href: "https://t.me/GeekPie_mirrors",
@@ -144,8 +137,14 @@ export default {
         text: "ShanghaiTech University",
         href: "https://www.shanghaitech.edu.cn/",
       },
-    ],
-    
-  }),
+    ];
+    axios.request({
+      url: "Mirrors-Status.json",
+      method: 'get',
+    }).then(res => {
+      this.repotable = res.data;
+      this.$forceUpdate();
+    })
+  },
 };
 </script>
