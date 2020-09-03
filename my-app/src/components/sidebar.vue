@@ -108,9 +108,17 @@
 </template>
 
 <script>
+const axios = require('axios');
 export default {
   name: "sidebar",
   data: () => ({
+    axios.request({
+      url: "Mirrors-Status.json",
+      method: 'get',
+    }).then(res => {
+      this.repotable = res.data;
+      this.$forceUpdate();
+    }),
     otherlinks: [
       {
         text: "镜像源日志 / News",
@@ -137,6 +145,7 @@ export default {
         href: "https://www.shanghaitech.edu.cn/",
       },
     ],
+    
   }),
 };
 </script>
